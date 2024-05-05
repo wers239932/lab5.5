@@ -1,10 +1,14 @@
 package app;
 
+import cli.Command;
 import dal.DataAccessLayer;
 import server.Server;
 import storage.Storage;
+import сommands.CommandArrayFiller;
 
+import java.io.FilterOutputStream;
 import java.io.IOException;
+import java.util.HashMap;
 
 public class AppServer {
     public static void Run() {
@@ -18,7 +22,9 @@ public class AppServer {
         }
         String host = System.getenv("SERVER_HOST");
         int port = Integer.parseInt(System.getenv("SERVER_PORT"));
-        Server server = new Server(host, port, storage);
+        CommandArrayFiller.setBasicCommands();
+        HashMap<String, Command> commandMap = CommandArrayFiller.getCommandMap();
+        Server server = new Server(host, port, storage, commandMap);
         server.handle();
 
         //раскомментировать если сделаем терминал на сервере

@@ -12,8 +12,8 @@ import java.util.ArrayList;
 public class RemoveLower implements Command {
     private StorageInterface storage;
 
-    public RemoveLower(StorageInterface storage) {
-        this.storage = storage;
+    public RemoveLower() {
+
     }
 
     @Override

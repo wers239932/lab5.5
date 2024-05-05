@@ -1,19 +1,17 @@
 package server;
 
-import api.*;
+import api.ProtocolInfo;
+import api.Request;
+import api.RequestStatus;
+import api.Response;
 import cli.Command;
 import cli.commandExceptions.CommandException;
 import storage.Storage;
-import storageInterface.StorageInterface;
 
 import java.io.*;
 import java.net.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
-import java.nio.channels.SocketChannel;
-import java.rmi.server.RemoteRef;
 import java.time.Duration;
 import java.util.*;
 import java.util.logging.FileHandler;
@@ -25,7 +23,7 @@ import static java.lang.System.in;
 import static java.lang.System.out;
 
 public class Server {
-    private InetAddress hostAddress;
+    InetSocketAddress socketAddress;
     private Storage storage;
     public final static Duration timeout = Duration.ofMillis(50);
     private Scanner scanner;
@@ -33,13 +31,15 @@ public class Server {
     private HashMap<String, Command> commandMap;
     private DatagramChannel datagramChannel;
 
-    public Server(String host, int port, Storage storage) {
+    public Server(String host, int port, Storage storage, HashMap<String, Command> commandMap) {
+        this.commandMap = commandMap;
         this.scanner = new Scanner(in);
         this.storage = storage;
         try {
-            this.hostAddress = InetAddress.getByName(host);
+            InetSocketAddress socketAddress = new InetSocketAddress(InetAddress.getByName(host), port);
             this.datagramChannel = DatagramChannel.open();
-            datagramChannel.configureBlocking(false);
+            this.datagramChannel.bind(socketAddress);
+            this.datagramChannel.configureBlocking(false);
         } catch (SocketException e) {
             throw new RuntimeException(e);
         } catch (UnknownHostException e) {
@@ -100,11 +100,12 @@ public class Server {
                         Request request = this.readRequest(data);
                         if (request != null) {
                             String commandName = request.getCommandName();
-                            Response response;
+                            Response response = null;
                             switch (commandName) {
                                 case ("getCommands"): {
-                                    Collection<Command> commands = this.commandMap.values();
+                                    ArrayList<Command> commands = new ArrayList(this.commandMap.values());
                                     response = new Response<>(commands, RequestStatus.DONE, null);
+                                    break;
                                 }
                                 case ("help"): {
                                     ArrayList<String> output = new ArrayList<>();
@@ -113,6 +114,7 @@ public class Server {
                                         output.add(command.getDescription());
                                         response = new Response<>(output, RequestStatus.DONE, null);
                                     }
+                                    break;
                                 }
                                 default: {
                                     Command command = this.commandMap.get(commandName);
@@ -124,6 +126,7 @@ public class Server {
                                         response = new Response<>(RequestStatus.FAILED, e.getMessage());
                                         logger.severe("запрос клиента не выполнен, ошибка: " + e.getMessage());
                                     }
+                                    break;
                                 }
                             }
                             this.sendReply(response, this.datagramChannel, clientAddress);

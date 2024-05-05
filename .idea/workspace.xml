@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3589990-0ec0-4060-995f-0dd8cbab242a" name="Changes" comment="возможно исправил все кроме команд">
+    <list default="true" id="a3589990-0ec0-4060-995f-0dd8cbab242a" name="Changes" comment="исправил команды">
+      <change afterPath="$PROJECT_DIR$/ItsLogTime.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Request.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/AppClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/AppServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cli/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cli/CommandSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/CommandSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Add.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Clear.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/CommandArrayFiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/CommandArrayFiller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/CountGreaterThanCapital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/CountGreaterThanCapital.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/Exit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Exit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/RemoveAllByCarCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/RemoveAllByCarCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/RemoveById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/RemoveById.java" afterDir="false" />
@@ -24,7 +24,6 @@
       <change beforePath="$PROJECT_DIR$/src/сommands/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Show.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/SumOfCarCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/SumOfCarCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Update.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/Write.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Write.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,7 @@
       <recent name="C:\Users\vladimir\Desktop\итмо\прога\программирование\лаба 5\lab5.5" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.standalone">
+  <component name="RunManager" selected="Application.client">
     <configuration name="client" type="Application" factoryName="Application">
       <envs>
         <env name="MODE" value="client" />
@@ -130,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714750139085</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="исправил команды">
+      <created>1714902939452</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714902939452</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +152,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="возможно исправил все кроме команд" />
-    <option name="LAST_COMMIT_MESSAGE" value="возможно исправил все кроме команд" />
+    <MESSAGE value="исправил команды" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправил команды" />
   </component>
 </project>

@@ -13,8 +13,8 @@ import java.util.ArrayList;
 public class Show implements Command {
     private StorageInterface storage;
 
-    public Show(StorageInterface storage) {
-        this.storage = storage;
+    public Show() {
+
     }
 
     @Override

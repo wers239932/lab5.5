@@ -12,8 +12,8 @@ import java.util.ArrayList;
 public class Add implements Command {
     private StorageInterface storage;
 
-    public Add(StorageInterface storage) {
-        this.storage = storage;
+    public Add() {
+
     }
 
     @Override

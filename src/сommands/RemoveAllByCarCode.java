@@ -14,8 +14,8 @@ public class RemoveAllByCarCode implements Command {
     private StorageInterface storage;
     private Long carCode;
 
-    public RemoveAllByCarCode(StorageInterface storage) {
-        this.storage = storage;
+    public RemoveAllByCarCode() {
+
     }
 
     @Override

@@ -18,8 +18,7 @@ public class AppClient {
         } catch (UnknownHostException e) {
             throw new RuntimeException(e);
         }
-        //ArrayList commandArray = CommandArrayFiller.setBasicCommands(client);
-        CommandSender commandExecuter = new CommandSender(new Terminal());
-        commandExecuter.start();
+        CommandSender CommandSender = new CommandSender(new Terminal(), client);
+        CommandSender.start();
     }
 }

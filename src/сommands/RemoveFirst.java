@@ -11,8 +11,8 @@ import java.util.ArrayList;
 public class RemoveFirst implements Command {
     private StorageInterface storage;
 
-    public RemoveFirst(StorageInterface storage) {
-        this.storage = storage;
+    public RemoveFirst() {
+
     }
 
     @Override

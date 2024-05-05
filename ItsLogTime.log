@@ -1,0 +1,66 @@
+мая 05, 2024 9:05:06 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 9:05:15 PM server.Server handle
+INFO: выключение сервера
+мая 05, 2024 9:05:29 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 9:14:44 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 9:15:20 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 9:19:41 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 9:22:08 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 9:23:33 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 9:23:57 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 9:52:36 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 9:52:37 PM server.Server readRequest
+INFO: прочитан запрос
+мая 05, 2024 9:53:45 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 9:53:59 PM server.Server readRequest
+INFO: прочитан запрос
+мая 05, 2024 9:59:09 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 10:00:32 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 10:00:36 PM server.Server readRequest
+INFO: прочитан запрос
+мая 05, 2024 10:01:41 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 10:01:42 PM server.Server readRequest
+INFO: прочитан запрос
+мая 05, 2024 10:02:39 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 10:02:40 PM server.Server readRequest
+INFO: прочитан запрос
+мая 05, 2024 10:14:02 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 10:14:05 PM server.Server readRequest
+INFO: прочитан запрос
+мая 05, 2024 10:15:57 PM server.Server <init>
+INFO: сервер создан
+мая 05, 2024 10:15:58 PM server.Server readRequest
+INFO: прочитан запрос
+мая 05, 2024 10:15:58 PM server.Server sendReply
+INFO: отправлен ответ
+мая 05, 2024 10:16:09 PM server.Server readRequest
+INFO: прочитан запрос
+мая 05, 2024 10:16:09 PM server.Server sendReply
+INFO: отправлен ответ
+мая 05, 2024 10:16:43 PM server.Server readRequest
+INFO: прочитан запрос
+мая 05, 2024 10:16:43 PM server.Server sendReply
+INFO: отправлен ответ
+мая 05, 2024 10:16:52 PM server.Server readRequest
+INFO: прочитан запрос
+мая 05, 2024 10:16:52 PM server.Server sendReply
+INFO: отправлен ответ
+мая 05, 2024 10:18:21 PM server.Server readRequest
+INFO: прочитан запрос
+мая 05, 2024 10:18:21 PM server.Server sendReply
+INFO: отправлен ответ

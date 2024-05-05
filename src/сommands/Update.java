@@ -13,8 +13,8 @@ import java.util.ArrayList;
 public class Update implements Command {
     private StorageInterface storage;
 
-    public Update(StorageInterface storage) {
-        this.storage = storage;
+    public Update() {
+
     }
 
     @Override

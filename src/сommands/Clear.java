@@ -11,8 +11,8 @@ import java.util.ArrayList;
 public class Clear implements Command {
     private StorageInterface storage;
 
-    public Clear(StorageInterface storage) {
-        this.storage = storage;
+    public Clear() {
+
     }
 
 

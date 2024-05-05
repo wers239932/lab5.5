@@ -12,8 +12,8 @@ import java.util.ArrayList;
 public class SumOfCarCode implements Command {
     private StorageInterface storage;
 
-    public SumOfCarCode(StorageInterface storage) {
-        this.storage = storage;
+    public SumOfCarCode() {
+
     }
 
     @Override

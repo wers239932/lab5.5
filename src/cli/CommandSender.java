@@ -15,16 +15,18 @@ public class CommandSender {
     private HashSet<String> runningScripts;
     private Client client;
 
-    public CommandSender(IOInterface terminal) {
+    public CommandSender(IOInterface terminal, Client client) {
         this.terminal = terminal;
         this.commandArray = new HashMap<>();
         this.runningScripts = new HashSet<String>();
+        this.client = client;
     }
 
-    public CommandSender(IOInterface terminal, HashSet<String> runningScripts) {
+    public CommandSender(IOInterface terminal, HashSet<String> runningScripts, Client client) {
         this.terminal = terminal;
         this.commandArray = new HashMap<>();
         this.runningScripts = runningScripts;
+        this.client = client;
     }
 
     private Collection<Command> getCommandArray() {
@@ -56,7 +58,7 @@ public class CommandSender {
                             break;
                         FileTerminal fileIO = new FileTerminal(filename);
                         this.runningScripts.add(filename);
-                        CommandSender commandExecuter = new CommandSender(fileIO, this.runningScripts);
+                        CommandSender commandExecuter = new CommandSender(fileIO, this.runningScripts, this.client);
                         commandExecuter.addCommandArray(this.getCommandArray());
                         commandExecuter.start();
                         this.runningScripts.remove(filename);

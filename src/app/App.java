@@ -20,9 +20,9 @@ public class App {
             System.out.println("не удалось загрузить коллекцию");
             System.exit(1);
         }
-        ArrayList commandArray = CommandArrayFiller.setBasicCommands(storage);
-        commandArray.add(new Save(storage));
-        CommandSender commandExecuter = new CommandSender(new Terminal());
-        commandExecuter.start();
+        ArrayList commandArray = CommandArrayFiller.setBasicCommands();
+        commandArray.add(new Save());
+        //CommandSender commandExecuter = new CommandSender(new Terminal());
+        //commandExecuter.start();
     }
 }

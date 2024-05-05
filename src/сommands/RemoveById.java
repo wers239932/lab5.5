@@ -14,8 +14,8 @@ public class RemoveById implements Command {
     private StorageInterface storage;
     private int id;
 
-    public RemoveById(StorageInterface storage) {
-        this.storage = storage;
+    public RemoveById() {
+
     }
 
     @Override

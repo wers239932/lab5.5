@@ -12,8 +12,8 @@ import java.util.ArrayList;
 public class CountGreaterThanCapital implements Command {
     private StorageInterface storage;
 
-    public CountGreaterThanCapital(StorageInterface storage) {
-        this.storage = storage;
+    public CountGreaterThanCapital() {
+
     }
 
     @Override

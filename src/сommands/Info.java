@@ -12,8 +12,8 @@ import java.util.ArrayList;
 public class Info implements Command {
     private StorageInterface storage;
 
-    public Info(StorageInterface storage) {
-        this.storage = storage;
+    public Info() {
+
     }
 
 

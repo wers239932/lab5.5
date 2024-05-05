@@ -12,8 +12,8 @@ import java.util.ArrayList;
 public class Save implements Command {
     private StorageInterface storage;
 
-    public Save(StorageInterface storage) {
-        this.storage = storage;
+    public Save() {
+
     }
 
     @Override

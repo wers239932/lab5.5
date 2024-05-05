@@ -11,6 +11,7 @@ import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class Storage implements StorageInterface, Serializable {
     private ArrayList<City> objects;
@@ -91,13 +92,9 @@ public class Storage implements StorageInterface, Serializable {
 
     @Override
     public int countGreaterThanCapital(Boolean capital) {
-        int amount = 0;
-        for (City cityStored : this.objects) {
-            if (cityStored.getCapital().compareTo(capital) > 0) {
-                amount++;
-            }
-        }
-        return amount;
+        return (int) this.objects.stream()
+                .filter((city) -> city.getCapital().compareTo(capital) > 0)
+                .count();
     }
 
     @Override
@@ -106,20 +103,12 @@ public class Storage implements StorageInterface, Serializable {
     }
 
     public void removeAllByCarCode(Long carCode) {
-        for (City cityStored : this.objects) {
-            if (cityStored.getCarCode() == carCode) {
-                this.objects.remove(cityStored);
-            }
-        }
+        this.objects.removeIf(cityStored -> cityStored.getCarCode() == carCode);
     }
 
     @Override
     public void removeById(int id) {
-        for (City cityStored : this.objects) {
-            if (cityStored.getId() == id) {
-                this.objects.remove(cityStored);
-            }
-        }
+        this.objects.removeIf(cityStored -> cityStored.getId() == id);
     }
 
     @Override
@@ -130,29 +119,18 @@ public class Storage implements StorageInterface, Serializable {
 
     @Override
     public void removeGreater(City city) {
-        for (City cityStored : this.objects) {
-            if (cityStored.compareTo(city) > 0) {
-                this.objects.remove(cityStored);
-            }
-        }
+        this.objects = this.objects.stream()
+                .filter(obj -> obj.compareTo(city) > 0)
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
     public void removeLower(City city) {
-        for (City cityStored : this.objects) {
-            if (cityStored.compareTo(city) < 0) {
-                this.objects.remove(cityStored);
-            }
-        }
+        this.objects = this.objects.stream().filter(cityStored -> cityStored.compareTo(city) < 0).collect(Collectors.toCollection(ArrayList::new));;
     }
 
     @Override
     public Long sumOfCarCode() {
-        Long sum = 0L;
-        for (City cityStored : this.objects) {
-            if (cityStored.getCarCode() != null)
-                sum += cityStored.getCarCode();
-        }
-        return sum;
+        return this.objects.stream().mapToLong(City::getCarCode).sum();
     }
 }

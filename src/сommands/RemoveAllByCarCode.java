@@ -1,11 +1,12 @@
 package сommands;
 
-import storageInterface.StorageInterface;
+import api.Request;
 import cli.Command;
-import cli.IOInterface;
 import cli.commandExceptions.CommandException;
 import storage.City;
+import storage.Storage;
 import storage.objectExceptions.CarCodeException;
+import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 
@@ -18,13 +19,15 @@ public class RemoveAllByCarCode implements Command {
     }
 
     @Override
-    public ArrayList<String> execute(ArrayList<String> args, IOInterface terminal) throws CommandException {
+    public ArrayList<String> execute(Request request, Storage storage) throws CommandException {
         try {
-            this.carCode = City.parseCarCode(args.get(0));
+            this.carCode = City.parseCarCode((String) request.getArgs().get(0));
         } catch (CarCodeException e) {
             throw new CommandException(e.getMessage());
+        } catch (NullPointerException e)
+        {
+            throw new CommandException("не введен аргумент");
         }
-
         ArrayList<String> response = new ArrayList<>();
         storage.removeAllByCarCode(carCode);
         response.add("объекты удалены");

@@ -1,6 +1,7 @@
 package api;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * класс запроса клиента для отправки по сети
@@ -18,10 +19,12 @@ public class Request<T> implements Serializable {
      * информация для запроса
      */
     private T data;
+    private ArrayList<String> args;
 
-    public Request(String commandName, T data) {
+    public Request(String commandName, T data, ArrayList<String> args) {
         this.commandName = commandName;
         this.data = data;
+        this.args = args;
     }
 
     public Request(String commandName) {
@@ -35,5 +38,9 @@ public class Request<T> implements Serializable {
 
     public T getData() {
         return data;
+    }
+
+    public ArrayList<String> getArgs() {
+        return this.args;
     }
 }

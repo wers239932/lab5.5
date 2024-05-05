@@ -1,10 +1,11 @@
 package сommands;
 
-import storageInterface.StorageInterface;
+import api.Request;
 import cli.Command;
-import cli.IOInterface;
 import cli.commandExceptions.CommandException;
+import storage.Storage;
 import storage.StorageInfo;
+import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 
@@ -15,8 +16,9 @@ public class Info implements Command {
         this.storage = storage;
     }
 
+
     @Override
-    public ArrayList<String> execute(ArrayList<String> args, IOInterface terminal) throws CommandException {
+    public ArrayList<String> execute(Request request, Storage storage) throws CommandException {
         ArrayList<String> response = new ArrayList<>();
         StorageInfo storageInfo = storage.getInfo();
         response.add("Дата созданиия: " + storageInfo.getCreationDate().toString());

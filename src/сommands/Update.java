@@ -1,11 +1,12 @@
 package сommands;
 
-import storageInterface.StorageInterface;
+import api.Request;
 import cli.Command;
-import cli.IOInterface;
 import cli.commandExceptions.CommandException;
-import storage.*;
+import storage.City;
+import storage.Storage;
 import storage.objectExceptions.IdException;
+import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 
@@ -17,42 +18,26 @@ public class Update implements Command {
     }
 
     @Override
-    public ArrayList<String> execute(ArrayList<String> args, IOInterface terminal) throws CommandException {
+    public ArrayList<String> execute(Request request, Storage storage) throws CommandException {
         int id;
         try {
-            id = City.parseId(args.get(0));
+            id = City.parseId((String) request.getArgs().get(0));
         } catch (IdException e) {
             throw new CommandException(e.getMessage());
         }
-        City city;
-        try {
-            Parser<String> parserName = new Parser();
-            String name = parserName.getArgumentWithRules("введите название города", terminal,
-                    arg -> City.parseName((String) arg));
-            Parser<Float> parserX = new Parser();
-            float x = parserX.getArgumentWithRules("введите число в формате float, первую координату", terminal,
-                    arg -> Coordinates.parseXCoord((String) arg));
-            Parser<Long> parserY = new Parser();
-            long y = parserY.getArgumentWithRules("введите число в формате long, вторую координату", terminal,
-                    arg -> Coordinates.parseYCoord((String) arg));
-            Parser<Long> parserArea = new Parser();
-            Long area = parserArea.getArgumentWithRules("введите площадь в формате Long, площадь должна быть больше 0", terminal,
-                    arg -> City.parseArea((String) arg));
-            Parser<Integer> parserPopulation = new Parser();
-            int population = parserPopulation.getArgumentWithRules("введите население, должно быть больше 0", terminal, arg -> City.parsePopulation((String) arg));
-            Parser<Double> parserMetersAbove = new Parser();
-            double deep = parserMetersAbove.getArgumentWithRules("введите высоту над уровнем моря в формате double", terminal, arg -> City.parseMetersAboveSeaLevel((String) arg));
-            Parser<Boolean> parserCapital = new Parser();
-            Boolean capital = parserCapital.getArgumentWithRules("введите true если у города есть столица, что угодно другое в ином случае", terminal, arg -> City.parseCapital((String) arg));
-            Parser<Long> parserCarCode = new Parser();
-            Long carcode = parserCarCode.getArgumentWithRules("введите carCode - целое число от 0 до 1000", terminal, arg -> City.parseCarCode((String) arg));
-            Parser<Government> parserGovernment = new Parser();
-            Government government = parserGovernment.getArgumentWithRules("введите тип правительства: KLEPTOCRACY, CORPORATOCRACY или PATRIARCHY", terminal, arg -> City.parseGovernment((String) arg));
-            Parser<Human> parserGovernor = new Parser();
-            Human governor = parserGovernor.getArgumentWithRules("введите дату в формате yyyy-MM-dd<английская буква T>HH:mm:ss", terminal, arg -> Human.parseGovernor((String) arg));
-            city = new City(id, name, new Coordinates(x, y), area, population, deep, capital, carcode, government, governor);
-        } catch (Exception e) {
-            throw new CommandException(e.getMessage());
+        City city = (City) request.getData();
+        for (City cityStored : storage.getCitiesList()) {
+            if (cityStored.getId() == city.getId()) {
+                cityStored.setName(city.getName());
+                cityStored.setArea(city.getArea());
+                cityStored.setGovernment(city.getGovernment());
+                cityStored.setGovernor(city.getGovernor());
+                cityStored.setCapital(city.getCapital());
+                cityStored.setCarCode(city.getCarCode());
+                cityStored.setMetersAboveSeaLevel(city.getMetersAboveSeaLevel());
+                cityStored.setPopulation(city.getPopulation());
+                cityStored.setCoordinates(city.getCoordinates());
+            }
         }
         ArrayList<String> response = new ArrayList<>();
         storage.update(city);

@@ -1,9 +1,10 @@
 package сommands;
 
-import storageInterface.StorageInterface;
+import api.Request;
 import cli.Command;
-import cli.IOInterface;
 import cli.commandExceptions.CommandException;
+import storage.Storage;
+import storageInterface.StorageInterface;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ public class Save implements Command {
     }
 
     @Override
-    public ArrayList<String> execute(ArrayList<String> args, IOInterface terminal) throws CommandException {
+    public ArrayList<String> execute(Request request, Storage storage) throws CommandException {
         try {
             storage.save();
         } catch (IOException e) {

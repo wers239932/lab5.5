@@ -20,6 +20,7 @@ public class CommandSender {
         this.commandArray = new HashMap<>();
         this.runningScripts = new HashSet<String>();
     }
+
     public CommandSender(IOInterface terminal, HashSet<String> runningScripts) {
         this.terminal = terminal;
         this.commandArray = new HashMap<>();
@@ -46,6 +47,9 @@ public class CommandSender {
                 String commandName = (String) commandLine.get(0);
                 ArrayList<String> response = new ArrayList<>();
                 switch (commandName) {
+                    case ("exit"): {
+                        System.exit(1);
+                    }
                     case ("execute_script"): {
                         String filename = commandLine.get(1).toString();
                         if (this.runningScripts.contains(filename))
@@ -61,11 +65,11 @@ public class CommandSender {
                     default: {
                         City city = null;
                         Command command = this.getCommand(commandName);
-                        if(command.getNeedObject()) {
+                        if (command.getNeedObject()) {
                             city = InteractiveCityParser.parseCity(this.terminal);
                         }
                         commandLine.remove(0);
-                        response = (ArrayList<String>) this.client.sendRequest(new Request<City>(commandName, city)).getData();
+                        response = (ArrayList<String>) this.client.sendRequest(new Request<City>(commandName, city, commandLine)).getData();
                         this.terminal.writeResponse(response);
                         break;
                     }

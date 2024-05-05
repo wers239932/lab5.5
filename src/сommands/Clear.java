@@ -1,9 +1,10 @@
 package сommands;
 
-import storageInterface.StorageInterface;
+import api.Request;
 import cli.Command;
-import cli.IOInterface;
 import cli.commandExceptions.CommandException;
+import storage.Storage;
+import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 
@@ -14,10 +15,11 @@ public class Clear implements Command {
         this.storage = storage;
     }
 
+
     @Override
-    public ArrayList<String> execute(ArrayList<String> args, IOInterface terminal) throws CommandException {
+    public ArrayList<String> execute(Request request, Storage storage) throws CommandException {
         ArrayList<String> response = new ArrayList<>();
-        this.storage.clear();
+        storage.clear();
         response.add("коллекция очищена");
         return response;
     }

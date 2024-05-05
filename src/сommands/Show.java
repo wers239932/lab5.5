@@ -1,5 +1,7 @@
 package сommands;
 
+import api.Request;
+import storage.Storage;
 import storageInterface.StorageInterface;
 import cli.Command;
 import cli.IOInterface;
@@ -16,10 +18,10 @@ public class Show implements Command {
     }
 
     @Override
-    public ArrayList<String> execute(ArrayList<String> args, IOInterface terminal) throws CommandException {
+    public ArrayList<String> execute(Request request, Storage storage) throws CommandException {
         ArrayList<String> response = new ArrayList<>();
-        for (Object city1 : storage.getCitiesList()) {
-            response.add(((City) city1).toString());
+        for (City city : storage.getCitiesList()) {
+            response.add((city).toString());
         }
         return response;
     }

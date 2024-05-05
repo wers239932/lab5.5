@@ -1,11 +1,12 @@
 package сommands;
 
-import storageInterface.StorageInterface;
+import api.Request;
 import cli.Command;
-import cli.IOInterface;
 import cli.commandExceptions.CommandException;
 import storage.City;
+import storage.Storage;
 import storage.objectExceptions.IdException;
+import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 
@@ -18,9 +19,9 @@ public class RemoveById implements Command {
     }
 
     @Override
-    public ArrayList<String> execute(ArrayList<String> args, IOInterface terminal) throws CommandException {
+    public ArrayList<String> execute(Request request, Storage storage) throws CommandException {
         try {
-            this.id = City.parseId(args.get(0));
+            this.id = City.parseId((String) request.getArgs().get(0));
         } catch (IdException e) {
             throw new CommandException(e.getMessage());
         }

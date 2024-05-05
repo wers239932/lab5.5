@@ -1,11 +1,11 @@
 package сommands;
 
-import storageInterface.StorageInterface;
+import api.Request;
 import cli.Command;
-import cli.IOInterface;
 import cli.commandExceptions.CommandException;
 import storage.City;
-import storage.objectExceptions.CapitalException;
+import storage.Storage;
+import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 
@@ -17,18 +17,20 @@ public class CountGreaterThanCapital implements Command {
     }
 
     @Override
-    public ArrayList<String> execute(ArrayList<String> args, IOInterface terminal) throws CommandException {
+    public ArrayList<String> execute(Request request, Storage storage) throws CommandException{
         Boolean capital;
-        try {
-            capital = City.parseCapital(args.get(0));
-        } catch (CapitalException e) {
+        try{
+            capital = City.parseCapital((String) request.getArgs().get(0));
+        }
+        catch (Exception e) {
             throw new CommandException(e.getMessage());
         }
-        int amount = storage.countGreaterThanCapital(capital);
         ArrayList<String> response = new ArrayList<>();
+        int amount = storage.countGreaterThanCapital(capital);
         response.add("количество объектов с полем carCode больше заданного равно " + amount);
         return response;
     }
+
 
     @Override
     public String getName() {

@@ -1,17 +1,12 @@
 package client;
 
-import storageInterface.StorageInterface;
 import api.ProtocolInfo;
 import api.Request;
-import api.RequestNames;
 import api.Response;
-import storage.City;
-import storage.StorageInfo;
 
 import java.io.*;
 import java.net.*;
 import java.time.Duration;
-import java.util.ArrayList;
 
 public class Client {
     public final static Duration timeout = Duration.ofSeconds(1);

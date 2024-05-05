@@ -51,6 +51,7 @@ public class CommandSender {
                 switch (commandName) {
                     case ("exit"): {
                         System.exit(1);
+                        break;
                     }
                     case ("execute_script"): {
                         String filename = commandLine.get(1).toString();
@@ -58,9 +59,9 @@ public class CommandSender {
                             break;
                         FileTerminal fileIO = new FileTerminal(filename);
                         this.runningScripts.add(filename);
-                        CommandSender commandExecuter = new CommandSender(fileIO, this.runningScripts, this.client);
-                        commandExecuter.addCommandArray(this.getCommandArray());
-                        commandExecuter.start();
+                        CommandSender commandSender = new CommandSender(fileIO, this.runningScripts, this.client);
+                        commandSender.addCommandArray(this.getCommandArray());
+                        commandSender.start();
                         this.runningScripts.remove(filename);
                         break;
                     }
@@ -76,7 +77,6 @@ public class CommandSender {
                         break;
                     }
                 }
-                //this.terminal.writeResponse(response);
             } catch (CommandDoesntExistException e) {
                 this.terminal.writeLine("такой команды не существует");
             } catch (NullPointerException e) {

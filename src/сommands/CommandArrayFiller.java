@@ -12,7 +12,7 @@ public class CommandArrayFiller {
 
     public static ArrayList<Command> setBasicCommands() {
         commandList = new ArrayList<>();
-        //commandList.add(new Help());
+        commandList.add(new Help());
         commandList.add(new Add());
         commandList.add(new Clear());
         commandList.add(new CountGreaterThanCapital());

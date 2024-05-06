@@ -126,11 +126,11 @@ public class Storage implements StorageInterface, Serializable {
 
     @Override
     public void removeLower(City city) {
-        this.objects = this.objects.stream().filter(cityStored -> cityStored.compareTo(city) < 0).collect(Collectors.toCollection(ArrayList::new));;
+        this.objects = this.objects.stream().filter(cityStored -> cityStored.compareTo(city) < 0).collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
     public Long sumOfCarCode() {
-        return this.objects.stream().mapToLong(City::getCarCode).sum();
+        return this.objects.stream().filter(city -> city.getCarCode()!=null).mapToLong(City::getCarCode).sum();
     }
 }

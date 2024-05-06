@@ -19,11 +19,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-import static java.lang.System.in;
-import static java.lang.System.out;
 
 public class Server {
-    InetSocketAddress socketAddress;
     private Storage storage;
     public final static Duration timeout = Duration.ofMillis(50);
     private Scanner scanner;
@@ -33,7 +30,7 @@ public class Server {
 
     public Server(String host, int port, Storage storage, HashMap<String, Command> commandMap) {
         this.commandMap = commandMap;
-        this.scanner = new Scanner(in);
+        this.scanner = new Scanner(System.in);
         this.storage = storage;
         try {
             InetSocketAddress socketAddress = new InetSocketAddress(InetAddress.getByName(host), port);
@@ -49,7 +46,7 @@ public class Server {
         }
         Logger logger = Logger.getLogger("MyLog");
         try {
-            FileHandler fh = new FileHandler("ItsLogTime.log", true);
+            FileHandler fh = new FileHandler("server_logger.log", true);
             logger.addHandler(fh);
             fh.setFormatter(new SimpleFormatter());
             logger.info("сервер создан");
@@ -109,8 +106,7 @@ public class Server {
                                 }
                                 case ("help"): {
                                     ArrayList<String> output = new ArrayList<>();
-                                    for(Command command: this.commandMap.values())
-                                    {
+                                    for (Command command : this.commandMap.values()) {
                                         output.add(command.getDescription());
                                         response = new Response<>(output, RequestStatus.DONE, null);
                                     }

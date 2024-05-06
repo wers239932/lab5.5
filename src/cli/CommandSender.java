@@ -1,6 +1,7 @@
 package cli;
 
 import api.Request;
+import api.Response;
 import cli.commandExceptions.CommandDoesntExistException;
 import cli.commandExceptions.CommandException;
 import client.Client;
@@ -47,7 +48,6 @@ public class CommandSender {
             try {
                 ArrayList commandLine = new ArrayList(List.of(this.terminal.readLine().split(" +")));
                 String commandName = (String) commandLine.get(0);
-                ArrayList<String> response = new ArrayList<>();
                 switch (commandName) {
                     case ("exit"): {
                         System.exit(1);
@@ -72,8 +72,11 @@ public class CommandSender {
                             city = InteractiveCityParser.parseCity(this.terminal);
                         }
                         commandLine.remove(0);
-                        response = (ArrayList<String>) this.client.sendRequest(new Request<City>(commandName, city, commandLine)).getData();
-                        this.terminal.writeResponse(response);
+                        Response response = this.client.sendRequest(new Request<City>(commandName, city, commandLine));
+                        if(response.getError()!=null)
+                            this.terminal.writeLine(response.getError());
+                        else
+                            this.terminal.writeResponse((ArrayList<String>) response.getData());
                         break;
                     }
                 }

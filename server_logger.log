@@ -1,0 +1,210 @@
+мая 08, 2024 11:09:45 AM server.Server <init>
+INFO: сервер создан
+мая 08, 2024 11:09:52 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:09:52 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:09:59 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:09:59 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:10:45 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:10:45 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:10:48 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:10:48 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:10:51 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:10:51 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:10:55 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:10:55 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:10:58 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:10:58 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:11:04 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:11:04 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:11:09 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:11:09 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: Index 0 out of bounds for length 0
+мая 08, 2024 11:11:09 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:12:27 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:12:27 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:12:27 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:12:37 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:12:37 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:12:42 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:12:42 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:12:42 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:13:15 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:13:15 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:13:15 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:13:28 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:13:28 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:13:28 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:13:41 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:13:41 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:13:41 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:13:47 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:13:47 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:13:47 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:13:50 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:13:50 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:13:50 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:14:29 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:14:29 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: Index 0 out of bounds for length 0
+мая 08, 2024 11:14:29 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:14:36 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:14:36 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: Index 0 out of bounds for length 0
+мая 08, 2024 11:14:36 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:14:42 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:14:42 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:14:48 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:14:48 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:17:09 AM server.Server <init>
+INFO: сервер создан
+мая 08, 2024 11:17:09 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:17:09 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:17:39 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:17:39 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:17:54 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:17:54 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:17:59 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:17:59 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:17:59 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:18:00 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:18:00 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:18:00 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:18:03 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:18:03 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:18:03 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:19:34 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:19:34 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:19:34 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:19:34 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:19:34 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:19:34 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:19:34 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:19:34 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:19:34 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:19:36 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:19:36 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:19:36 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:19:36 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:19:36 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:19:36 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:19:37 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:19:37 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:19:37 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:19:40 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:19:40 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:19:40 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:19:42 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:19:42 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:19:42 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:19:42 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:19:42 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:19:42 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:19:42 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:19:42 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:19:42 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:19:43 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:19:43 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:19:43 AM server.Server sendReply
+INFO: отправлен ответ
+мая 08, 2024 11:19:44 AM server.Server readRequest
+INFO: прочитан запрос
+мая 08, 2024 11:19:44 AM server.Server handle
+SEVERE: запрос клиента не выполнен, ошибка: неверный набор данных
+мая 08, 2024 11:19:44 AM server.Server sendReply
+INFO: отправлен ответ

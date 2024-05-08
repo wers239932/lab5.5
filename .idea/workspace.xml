@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3589990-0ec0-4060-995f-0dd8cbab242a" name="Changes" comment="теперь все еще и работает. &#10;исправить help!!">
-      <change afterPath="$PROJECT_DIR$/src/сommands/Help.java" afterDir="false" />
+    <list default="true" id="a3589990-0ec0-4060-995f-0dd8cbab242a" name="Changes" comment="все работает. &#10;добавить ограничение попыток на отправку запроса с клиента">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_logger.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/сommands/ExecuteScript.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItsLogTime.log" beforeDir="false" afterPath="$PROJECT_DIR$/ItsLogTime.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/RequestNames.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cli/CommandSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/CommandSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/Storage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/CommandArrayFiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/CommandArrayFiller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/сommands/CountGreaterThanCapital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/CountGreaterThanCapital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/сommands/RemoveAllByCarCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/RemoveAllByCarCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/сommands/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Show.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/сommands/SumOfCarCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/SumOfCarCode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +63,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\vladimir\Desktop\итмо\прога\программирование\лаба 5\lab5.5" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="сommands" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.client">
+  <component name="RunManager" selected="Application.server">
     <configuration name="client" type="Application" factoryName="Application">
       <envs>
         <env name="MODE" value="client" />
@@ -140,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714936983742</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="все работает. &#10;добавить ограничение попыток на отправку запроса с клиента">
+      <created>1715019018394</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715019018394</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -161,6 +176,7 @@
     <MESSAGE value="возможно исправил все кроме команд" />
     <MESSAGE value="исправил команды" />
     <MESSAGE value="теперь все еще и работает. &#10;исправить help!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="теперь все еще и работает. &#10;исправить help!!" />
+    <MESSAGE value="все работает. &#10;добавить ограничение попыток на отправку запроса с клиента" />
+    <option name="LAST_COMMIT_MESSAGE" value="все работает. &#10;добавить ограничение попыток на отправку запроса с клиента" />
   </component>
 </project>

@@ -24,8 +24,7 @@ public class RemoveAllByCarCode implements Command {
             this.carCode = City.parseCarCode((String) request.getArgs().get(0));
         } catch (CarCodeException e) {
             throw new CommandException(e.getMessage());
-        } catch (NullPointerException e)
-        {
+        } catch (NullPointerException e) {
             throw new CommandException("не введен аргумент");
         }
         ArrayList<String> response = new ArrayList<>();

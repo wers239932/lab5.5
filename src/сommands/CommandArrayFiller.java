@@ -1,8 +1,6 @@
 package сommands;
 
 import cli.Command;
-import cli.commandExceptions.CommandDoesntExistException;
-import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,9 +27,10 @@ public class CommandArrayFiller {
         commandList.add(new Write());
         return commandList;
     }
+
     public static HashMap<String, Command> getCommandMap() {
         HashMap<String, Command> commandMap = new HashMap<>();
-        for(Command command : commandList)
+        for (Command command : commandList)
             commandMap.put(command.getName(), command);
         return commandMap;
     }

@@ -37,10 +37,6 @@ public class Server {
             this.datagramChannel = DatagramChannel.open();
             this.datagramChannel.bind(socketAddress);
             this.datagramChannel.configureBlocking(false);
-        } catch (SocketException e) {
-            throw new RuntimeException(e);
-        } catch (UnknownHostException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

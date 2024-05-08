@@ -17,12 +17,12 @@ public class CountGreaterThanCapital implements Command {
     }
 
     @Override
-    public ArrayList<String> execute(Request request, Storage storage) throws CommandException{
+    public ArrayList<String> execute(Request request, Storage storage) throws CommandException {
+        if (request.getArgs().isEmpty()) throw new CommandException("неверный набор данных");
         Boolean capital;
-        try{
+        try {
             capital = City.parseCapital((String) request.getArgs().get(0));
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             throw new CommandException(e.getMessage());
         }
         ArrayList<String> response = new ArrayList<>();

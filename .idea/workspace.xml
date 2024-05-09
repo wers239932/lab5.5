@@ -1,30 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3589990-0ec0-4060-995f-0dd8cbab242a" name="Changes" comment="исправил не более общее обращение к классу команды, убрал лишние импорты">
+    <list default="true" id="a3589990-0ec0-4060-995f-0dd8cbab242a" name="Changes" comment="исправил часть ошибок">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/AppClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/AppServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cli/CommandSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/CommandSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Add.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Clear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/CommandArrayFiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/CommandArrayFiller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/CountGreaterThanCapital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/CountGreaterThanCapital.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/ExecuteScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/ExecuteScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/RemoveAllByCarCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/RemoveAllByCarCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/RemoveById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/RemoveById.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/RemoveFirst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/RemoveFirst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/RemoveGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/RemoveGreater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/RemoveLower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/RemoveLower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Save.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Show.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/SumOfCarCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/SumOfCarCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_logger.log" beforeDir="false" afterPath="$PROJECT_DIR$/server_logger.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +58,7 @@
       <recent name="сommands" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.server">
+  <component name="RunManager" selected="Application.client">
     <configuration name="client" type="Application" factoryName="Application">
       <envs>
         <env name="MODE" value="client" />

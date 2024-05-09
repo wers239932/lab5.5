@@ -5,16 +5,10 @@ import cli.Command;
 import cli.commandExceptions.CommandException;
 import storage.Storage;
 import storage.StorageInfo;
-import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 
 public class Info implements Command {
-    private StorageInterface storage;
-
-    public Info() {
-
-    }
 
 
     @Override

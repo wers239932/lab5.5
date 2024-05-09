@@ -19,7 +19,7 @@ public class City implements Comparable<City>, Serializable {
     private int id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
 
     public static String parseName(String nameToCheck) throws NameCityException {
-        if (nameToCheck.equals("")) throw new NameCityException("название не может быть null");
+        if (nameToCheck.isEmpty()) throw new NameCityException("название не может быть null");
         return nameToCheck;
     }
 
@@ -114,7 +114,7 @@ public class City implements Comparable<City>, Serializable {
 
     public static Boolean parseCapital(String capital) throws CapitalException {
         Boolean y;
-        if (!capital.equals("")) {
+        if (!capital.isEmpty()) {
             try {
                 y = Boolean.parseBoolean(capital);
                 return y;
@@ -131,7 +131,7 @@ public class City implements Comparable<City>, Serializable {
 
     public static Long parseCarCode(String carcode) throws CarCodeException {
         Long carcode1;
-        if (!carcode.equals("") && !carcode.equals("null")) {
+        if (!carcode.isEmpty() && !carcode.equals("null")) {
             try {
                 carcode1 = Long.parseLong(carcode);
             } catch (Exception e) {
@@ -149,7 +149,7 @@ public class City implements Comparable<City>, Serializable {
 
     public static Government parseGovernment(String government) throws GovernmentException {
         Government government1;
-        if (!government.equals("") && !government.equals("null")) {
+        if (!government.isEmpty() && !government.equals("null")) {
             try {
                 government1 = Government.valueOf(government);
             } catch (Exception e) {

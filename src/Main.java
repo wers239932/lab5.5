@@ -10,11 +10,11 @@ public class Main {
                 break;
             }
             case ("server"): {
-                AppServer.Run();
+                AppServer.run();
                 break;
             }
             case ("client"): {
-                AppClient.Run();
+                AppClient.run();
                 break;
             }
         }

@@ -6,12 +6,11 @@ import server.Server;
 import storage.Storage;
 import сommands.CommandArrayFiller;
 
-import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
 
 public class AppServer {
-    public static void Run() {
+    public static void run() {
         DataAccessLayer dataAccessLayer = new DataAccessLayer(System.getenv("SAVEFILE"));
         Storage storage = null;
         try {

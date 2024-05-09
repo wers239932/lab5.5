@@ -10,11 +10,6 @@ import storageInterface.StorageInterface;
 import java.util.ArrayList;
 
 public class Show implements Command {
-    private StorageInterface storage;
-
-    public Show() {
-
-    }
 
     @Override
     public ArrayList<String> execute(Request request, Storage storage) throws CommandException {

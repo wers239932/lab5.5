@@ -5,16 +5,11 @@ import cli.Command;
 import cli.commandExceptions.CommandException;
 import storage.City;
 import storage.Storage;
-import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 
 public class ExecuteScript implements Command {
-    private StorageInterface storage;
 
-    public ExecuteScript() {
-
-    }
 
     @Override
     public ArrayList<String> execute(Request request, Storage storage) throws CommandException {

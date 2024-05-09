@@ -6,22 +6,17 @@ import cli.commandExceptions.CommandException;
 import storage.City;
 import storage.Storage;
 import storage.objectExceptions.CarCodeException;
-import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 
 public class RemoveAllByCarCode implements Command {
-    private StorageInterface storage;
-    private Long carCode;
 
-    public RemoveAllByCarCode() {
-
-    }
 
     @Override
     public ArrayList<String> execute(Request request, Storage storage) throws CommandException {
+        Long carCode;
         try {
-            this.carCode = City.parseCarCode((String) request.getArgs().get(0));
+            carCode = City.parseCarCode((String) request.getArgs().get(0));
         } catch (CarCodeException e) {
             throw new CommandException(e.getMessage());
         } catch (NullPointerException e) {

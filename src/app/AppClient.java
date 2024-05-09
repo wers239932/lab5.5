@@ -3,13 +3,11 @@ package app;
 import cli.CommandSender;
 import cli.Terminal;
 import client.Client;
-import сommands.CommandArrayFiller;
 
 import java.net.UnknownHostException;
-import java.util.ArrayList;
 
 public class AppClient {
-    public static void Run() {
+    public static void run() {
         String host = System.getenv("SERVER_HOST");
         int port = Integer.parseInt(System.getenv("SERVER_PORT"));
         Client client = null;

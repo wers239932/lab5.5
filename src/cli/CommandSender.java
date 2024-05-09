@@ -48,14 +48,14 @@ public class CommandSender {
         this.addCommandArray(commands);
         while (true) {
             try {
-                ArrayList commandLine = new ArrayList(List.of(this.terminal.readLine().split(" +")));
-                String commandName = (String) commandLine.get(0);
+                ArrayList<String> commandLine = new ArrayList<>(List.of(this.terminal.readLine().split(" +")));
+                String commandName = commandLine.get(0);
                 Command command = this.getCommand(commandName);
-                if(command.getClass()==Exit.class)
+                if(command instanceof Exit)
                 {
                     System.exit(1);
-                } else if (command.getClass()==ExecuteScript.class) {
-                    String filename = commandLine.get(1).toString();
+                } else if (command instanceof ExecuteScript) {
+                    String filename = commandLine.get(1);
                     if (this.runningScripts.contains(filename))
                         break;
                     FileTerminal fileIO = new FileTerminal(filename);
@@ -70,7 +70,7 @@ public class CommandSender {
                         city = InteractiveCityParser.parseCity(this.terminal);
                     }
                     commandLine.remove(0);
-                    Response response = this.client.sendRequest(new Request<City>(commandName, city, commandLine));
+                    Response response = this.client.sendRequest(new Request<>(commandName, city, commandLine));
                     if(response.getError()!=null)
                         this.terminal.writeLine(response.getError());
                     else

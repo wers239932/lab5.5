@@ -4,16 +4,10 @@ import api.Request;
 import cli.Command;
 import cli.commandExceptions.CommandException;
 import storage.Storage;
-import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 
 public class SumOfCarCode implements Command {
-    private StorageInterface storage;
-
-    public SumOfCarCode() {
-
-    }
 
     @Override
     public ArrayList<String> execute(Request request, Storage storage) throws CommandException {

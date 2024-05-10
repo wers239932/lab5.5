@@ -8,6 +8,7 @@ import storage.Storage;
 import storage.objectExceptions.CarCodeException;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class RemoveAllByCarCode implements Command {
 
@@ -19,11 +20,11 @@ public class RemoveAllByCarCode implements Command {
             carCode = City.parseCarCode((String) request.getArgs().get(0));
         } catch (CarCodeException e) {
             throw new CommandException(e.getMessage());
-        } catch (NullPointerException e) {
+        } catch (IndexOutOfBoundsException e) {
             throw new CommandException("не введен аргумент");
         }
         ArrayList<String> response = new ArrayList<>();
-        storage.removeAllByCarCode(carCode);
+        storage.getToCollect(storage.getCitiesStream().filter(city -> !Objects.equals(city.getCarCode(), carCode)));
         response.add("объекты удалены");
         return response;
     }

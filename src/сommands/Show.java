@@ -5,16 +5,16 @@ import cli.Command;
 import cli.commandExceptions.CommandException;
 import storage.City;
 import storage.Storage;
-import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Show implements Command {
 
     @Override
     public ArrayList<String> execute(Request request, Storage storage) throws CommandException {
         ArrayList<String> response = new ArrayList<>();
-        for (City city : storage.getCitiesList()) {
+        for (City city : storage.getCitiesStream().collect(Collectors.toCollection(ArrayList::new))) {
             response.add((city).toString());
         }
         return response;

@@ -14,7 +14,7 @@ public class RemoveLower implements Command {
     public ArrayList<String> execute(Request request, Storage storage) throws CommandException {
         City city = (City) request.getData();
         ArrayList<String> response = new ArrayList<>();
-        storage.removeLower(city);
+        storage.getToCollect(storage.getCitiesStream().filter(obj -> obj.compareTo(city) > 0));
         response.add("элементы удалены");
         return response;
     }

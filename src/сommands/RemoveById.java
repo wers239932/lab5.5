@@ -19,9 +19,11 @@ public class RemoveById implements Command {
             id = City.parseId((String) request.getArgs().get(0));
         } catch (IdException e) {
             throw new CommandException(e.getMessage());
+        } catch (IndexOutOfBoundsException e) {
+            throw new CommandException("не введен аргумент");
         }
         ArrayList<String> response = new ArrayList<>();
-        storage.removeById(id);
+        storage.getToCollect(storage.getCitiesStream().filter(city -> city.getId() != id));
         response.add("объект удален");
         return response;
     }

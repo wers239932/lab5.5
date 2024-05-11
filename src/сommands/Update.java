@@ -6,16 +6,10 @@ import cli.commandExceptions.CommandException;
 import storage.City;
 import storage.Storage;
 import storage.objectExceptions.IdException;
-import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 
 public class Update implements Command {
-    private StorageInterface storage;
-
-    public Update() {
-
-    }
 
     @Override
     public ArrayList<String> execute(Request request, Storage storage) throws CommandException {

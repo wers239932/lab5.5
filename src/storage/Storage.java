@@ -1,7 +1,7 @@
 package storage;
 
-import storageInterface.StorageInterface;
 import dal.DataAccessLayer;
+import storageInterface.StorageInterface;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Storage implements StorageInterface, Serializable {
     private ArrayList<City> objects;
@@ -90,26 +91,12 @@ public class Storage implements StorageInterface, Serializable {
         this.objects.clear();
     }
 
-    @Override
-    public int countGreaterThanCapital(Boolean capital) {
-        return (int) this.objects.stream()
-                .filter((city) -> city.getCapital().compareTo(capital) > 0)
-                .count();
-    }
 
     @Override
     public StorageInfo getInfo() {
         return new StorageInfo(this.objects.size(), this.creationDate);
     }
 
-    public void removeAllByCarCode(Long carCode) {
-        this.objects.removeIf(cityStored -> cityStored.getCarCode() == carCode);
-    }
-
-    @Override
-    public void removeById(int id) {
-        this.objects.removeIf(cityStored -> cityStored.getId() == id);
-    }
 
     @Override
     public void removeFirst() {
@@ -118,19 +105,12 @@ public class Storage implements StorageInterface, Serializable {
     }
 
     @Override
-    public void removeGreater(City city) {
-        this.objects = this.objects.stream()
-                .filter(obj -> obj.compareTo(city) > 0)
-                .collect(Collectors.toCollection(ArrayList::new));
+    public Stream<City> getCitiesStream() {
+        return this.objects.stream();
     }
 
     @Override
-    public void removeLower(City city) {
-        this.objects = this.objects.stream().filter(cityStored -> cityStored.compareTo(city) < 0).collect(Collectors.toCollection(ArrayList::new));;
-    }
-
-    @Override
-    public Long sumOfCarCode() {
-        return this.objects.stream().mapToLong(City::getCarCode).sum();
+    public void getToCollect(Stream<City> cityStream) {
+        this.objects = cityStream.collect(Collectors.toCollection(ArrayList::new));
     }
 }

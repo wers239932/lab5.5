@@ -1,25 +1,19 @@
 package сommands;
 
 import api.Request;
-import storage.Storage;
-import storageInterface.StorageInterface;
 import cli.Command;
-import cli.IOInterface;
 import cli.commandExceptions.CommandException;
+import storage.City;
+import storage.Storage;
 
 import java.util.ArrayList;
 
 public class SumOfCarCode implements Command {
-    private StorageInterface storage;
-
-    public SumOfCarCode() {
-
-    }
 
     @Override
     public ArrayList<String> execute(Request request, Storage storage) throws CommandException {
         ArrayList<String> response = new ArrayList<>();
-        response.add("сумма carcode по всем объектам равна " + storage.sumOfCarCode().toString());
+        response.add("сумма carcode по всем объектам равна " + storage.getCitiesStream().filter(city -> city.getCarCode() != null).mapToLong(City::getCarCode).sum());
         return response;
     }
 

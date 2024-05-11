@@ -4,16 +4,10 @@ import api.Request;
 import cli.Command;
 import cli.commandExceptions.CommandException;
 import storage.Storage;
-import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 
 public class Clear implements Command {
-    private StorageInterface storage;
-
-    public Clear() {
-
-    }
 
 
     @Override

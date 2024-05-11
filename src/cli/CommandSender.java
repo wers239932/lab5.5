@@ -1,11 +1,14 @@
 package cli;
 
 import api.Request;
+import api.Response;
 import cli.commandExceptions.CommandDoesntExistException;
 import cli.commandExceptions.CommandException;
 import client.Client;
 import client.InteractiveCityParser;
 import storage.City;
+import сommands.ExecuteScript;
+import сommands.Exit;
 
 import java.util.*;
 
@@ -45,38 +48,34 @@ public class CommandSender {
         this.addCommandArray(commands);
         while (true) {
             try {
-                ArrayList commandLine = new ArrayList(List.of(this.terminal.readLine().split(" +")));
-                String commandName = (String) commandLine.get(0);
-                ArrayList<String> response = new ArrayList<>();
-                switch (commandName) {
-                    case ("exit"): {
-                        System.exit(1);
-                    }
-                    case ("execute_script"): {
-                        String filename = commandLine.get(1).toString();
-                        if (this.runningScripts.contains(filename))
-                            break;
-                        FileTerminal fileIO = new FileTerminal(filename);
-                        this.runningScripts.add(filename);
-                        CommandSender commandExecuter = new CommandSender(fileIO, this.runningScripts, this.client);
-                        commandExecuter.addCommandArray(this.getCommandArray());
-                        commandExecuter.start();
-                        this.runningScripts.remove(filename);
+                ArrayList<String> commandLine = new ArrayList<>(List.of(this.terminal.readLine().split(" +")));
+                String commandName = commandLine.get(0);
+                Command command = this.getCommand(commandName);
+                if(command instanceof Exit)
+                {
+                    System.exit(1);
+                } else if (command instanceof ExecuteScript) {
+                    String filename = commandLine.get(1);
+                    if (this.runningScripts.contains(filename))
                         break;
+                    FileTerminal fileIO = new FileTerminal(filename);
+                    this.runningScripts.add(filename);
+                    CommandSender commandSender = new CommandSender(fileIO, this.runningScripts, this.client);
+                    commandSender.addCommandArray(this.getCommandArray());
+                    commandSender.start();
+                    this.runningScripts.remove(filename);
+                } else {
+                    City city = null;
+                    if (command.getNeedObject()) {
+                        city = InteractiveCityParser.parseCity(this.terminal);
                     }
-                    default: {
-                        City city = null;
-                        Command command = this.getCommand(commandName);
-                        if (command.getNeedObject()) {
-                            city = InteractiveCityParser.parseCity(this.terminal);
-                        }
-                        commandLine.remove(0);
-                        response = (ArrayList<String>) this.client.sendRequest(new Request<City>(commandName, city, commandLine)).getData();
-                        this.terminal.writeResponse(response);
-                        break;
-                    }
+                    commandLine.remove(0);
+                    Response response = this.client.sendRequest(new Request<>(commandName, city, commandLine));
+                    if(response.getError()!=null)
+                        this.terminal.writeLine(response.getError());
+                    else
+                        this.terminal.writeResponse((ArrayList<String>) response.getData());
                 }
-                //this.terminal.writeResponse(response);
             } catch (CommandDoesntExistException e) {
                 this.terminal.writeLine("такой команды не существует");
             } catch (NullPointerException e) {

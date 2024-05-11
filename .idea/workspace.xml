@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3589990-0ec0-4060-995f-0dd8cbab242a" name="Changes" comment="исправил команды">
-      <change afterPath="$PROJECT_DIR$/ItsLogTime.log" afterDir="false" />
+    <list default="true" id="a3589990-0ec0-4060-995f-0dd8cbab242a" name="Changes" comment="убрал логгер из гита">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/AppClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/AppServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cli/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cli/CommandSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/CommandSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Add.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Clear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/CommandArrayFiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/CommandArrayFiller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_logger.log" beforeDir="false" afterPath="$PROJECT_DIR$/server_logger.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storageInterface/StorageInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storageInterface/StorageInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/CountGreaterThanCapital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/CountGreaterThanCapital.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/RemoveAllByCarCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/RemoveAllByCarCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/RemoveById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/RemoveById.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/RemoveFirst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/RemoveFirst.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/RemoveGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/RemoveGreater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/RemoveLower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/RemoveLower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Save.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Show.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сommands/SumOfCarCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/SumOfCarCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сommands/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/сommands/Update.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +30,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -67,6 +61,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\vladimir\Desktop\итмо\прога\программирование\лаба 5\lab5.5" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="сommands" />
     </key>
   </component>
   <component name="RunManager" selected="Application.client">
@@ -136,8 +133,46 @@
       <option name="project" value="LOCAL" />
       <updated>1714902939452</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="теперь все еще и работает. &#10;исправить help!!">
+      <created>1714936764591</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714936764591</updated>
+    </task>
+    <task id="LOCAL-00004" summary="теперь все еще и работает. &#10;исправить help!!">
+      <created>1714936983742</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714936983742</updated>
+    </task>
+    <task id="LOCAL-00005" summary="все работает. &#10;добавить ограничение попыток на отправку запроса с клиента">
+      <created>1715019018394</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715019018394</updated>
+    </task>
+    <task id="LOCAL-00006" summary="исправил не более общее обращение к классу команды, убрал лишние импорты">
+      <created>1715168424534</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715168424534</updated>
+    </task>
+    <task id="LOCAL-00007" summary="убрал логгер из гита">
+      <created>1715276095310</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715276095310</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -153,6 +188,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="возможно исправил все кроме команд" />
     <MESSAGE value="исправил команды" />
-    <option name="LAST_COMMIT_MESSAGE" value="исправил команды" />
+    <MESSAGE value="теперь все еще и работает. &#10;исправить help!!" />
+    <MESSAGE value="все работает. &#10;добавить ограничение попыток на отправку запроса с клиента" />
+    <MESSAGE value="исправил не более общее обращение к классу команды, убрал лишние импорты" />
+    <MESSAGE value="убрал логгер из гита" />
+    <option name="LAST_COMMIT_MESSAGE" value="убрал логгер из гита" />
   </component>
 </project>

@@ -5,22 +5,16 @@ import cli.Command;
 import cli.commandExceptions.CommandException;
 import storage.City;
 import storage.Storage;
-import storageInterface.StorageInterface;
 
 import java.util.ArrayList;
 
 public class RemoveLower implements Command {
-    private StorageInterface storage;
-
-    public RemoveLower() {
-
-    }
 
     @Override
     public ArrayList<String> execute(Request request, Storage storage) throws CommandException {
         City city = (City) request.getData();
         ArrayList<String> response = new ArrayList<>();
-        storage.removeLower(city);
+        storage.getToCollect(storage.getCitiesStream().filter(obj -> obj.compareTo(city) > 0));
         response.add("элементы удалены");
         return response;
     }

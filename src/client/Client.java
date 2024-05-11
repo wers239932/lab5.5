@@ -58,7 +58,6 @@ public class Client {
         ByteArrayInputStream inputStream = new ByteArrayInputStream(buffer);
         byte[] byteResponse = new byte[0];
         byte[] idBytes = new byte[4];
-        int id;
         byte total;
         byte index;
         while (true) {
@@ -83,12 +82,8 @@ public class Client {
             ObjectInputStream inputStream1 = new ObjectInputStream(byteArrayInputStream);
             Response response = (Response) inputStream1.readObject();
             return response;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
-
-
 }
